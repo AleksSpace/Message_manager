@@ -8,7 +8,7 @@
 1. Склонировать репозиторий с Github:
 
 ````
-git clone git@github.com:Witaly3/notification_service.git
+git clone git@github.com:AleksSpace/Message_manager.git
 ````
 2. Перейти в директорию проекта
 
@@ -21,7 +21,7 @@ python -m venv venv
 4. Активировать окружение: 
 
 ````
-source\venv\bin\activate
+. \venv\Scripts\activate
 ````
 5. В файле .evn заполнить необходимые данные: ```TOKEN = '<your token>'```
  
@@ -40,18 +40,27 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-9. Запустить celery
-```
-celery -A notification_service worker -l info
-```
-10. Запустить flower
 
-```
-celery -A notification_service flower --port=5555
-```
 ***
 ### Запуск тестов
 ``` 
 python manage.py test
 ```
 ***
+### URLS
+
+```http://0.0.0.0:8000/api/``` - api проекта
+
+```http://0.0.0.0:8000/api/clients/``` - клиенты
+
+```http://0.0.0.0:8000/api/mailings/``` - рассылки
+
+```http://0.0.0.0:8000/api/mailings/fullinfo/``` - общая статистика по всем рассылкам
+
+```http://0.0.0.0:8000/api/mailings/<pk>/info/``` - детальная статистика по конкретной рассылке
+
+```http://0.0.0.0:8000/api/messages/``` - сообщения
+
+```http://0.0.0.0:8000/docs/``` - docs проекта(swagger)
+
+```http://0.0.0.0:8000/redoc/``` - docs проекта(redoc)
