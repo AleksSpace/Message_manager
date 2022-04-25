@@ -47,7 +47,7 @@ python manage.py runserver
 python manage.py test
 ```
 ***
-### URLS
+### URLs
 
 ```http://0.0.0.0:8000/api/``` - api проекта
 
